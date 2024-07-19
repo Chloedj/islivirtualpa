@@ -196,3 +196,205 @@ html {
 .fade-in.visible {
     opacity: 1;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        color: #000;
+    }
+    
+    .logo {
+        width: 125px;
+    }
+    
+    .nav-link {
+        color: #000 !important;
+    }
+    
+    .nav-link:hover {
+        color: rgba(0, 0, 0, .5) !important;
+    }
+    
+    .hero {
+        position: relative;
+        height: 400px; /* Set the height to 400px */
+        background: url('images/va-hero-image.jpg') no-repeat center center/cover;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+        z-index: 1; /* Ensure overlay is behind the text */
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2; /* Ensure text is above the overlay */
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em; /* Adjust font size */
+        margin-bottom: 10px;
+    }
+    
+    .hero p {
+        font-size: 1.2em; /* Adjust font size */
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    .about {
+        padding: 60px 0;
+    }
+    
+    .about-text {
+        padding-right: 30px;
+    }
+    
+    .about img {
+        width: 65%; /* Adjust image width */
+        height: auto;
+        border-radius: 10px;
+    }
+    
+    .services {
+        background-color: #f9f9f9;
+        padding: 60px 0;
+    }
+    
+    .services .service {
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .services .service:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .services .service-icon {
+        font-size: 3em;
+        color: #333;
+        margin-bottom: 15px;
+    }
+    
+    .services h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    
+    .services p {
+        font-size: 1em;
+        color: #666;
+    }
+    
+    .testimonials {
+        background-color: #fff;
+        padding: 60px 0;
+    }
+    
+    .testimonials .testimonial {
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonials .testimonial-content {
+        font-style: italic;
+        color: #666;
+    }
+    
+    .testimonials .testimonial-author {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .about, .services, .testimonials, .contact {
+        text-align: center;
+    }
+    
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 20px 0;
+    }
+    
+    .contact-email {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px 0;
+    }
+    
+    .footer-info {
+        background-color: #fff;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 0.9em;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-info a {
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .footer-info p{
+        color:#000;
+    }
+    
+    .footer-info a:hover {
+        text-decoration: underline;
+    }
+    
+    .contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    #contact p{
+        font-size: 0.9rem;
+    }
+    
+    .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    .fade-in.visible {
+        opacity: 1;
+    }
+    
+}
