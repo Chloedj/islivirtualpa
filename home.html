@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container fade-in">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fade-in">
             <a class="navbar-brand" href="#">
                 <img src="images/isli virtual pa services.jpeg" alt="Isli Virtual PA Services Logo" class="logo">
             </a>
@@ -35,44 +35,44 @@
                 </ul>
             </div>
         </nav>
-        <div class="hero">
+        <div class="hero fade-in">
             <div class="hero-content">
                 <h1>Welcome to Isli Virtual PA Services</h1>
                 <p>Professional Virtual Assistance to Help Your Business Thrive</p>
             </div>
         </div>
-        <section id="about" class="about">
+        <section id="about" class="about fade-in">
             <div class="row align-items-center">
-                <div class="col-md-6 about-text">
+                <div class="col-md-6 about-text fade-in">
                     <h2>About Me</h2>
                     <p>My name is Jo, and I am a dedicated Virtual Assistant with a passion for helping businesses thrive by providing top-notch administrative and bookkeeping services.</p>
                     <p>With 5 years of experience running my own Virtual Assistant Agency, I bring a wealth of knowledge and a commitment to excellence in everything I do. My goal is to help you focus on what you do best by taking care of the essential, yet time-consuming, tasks.</p>
                     <p>I'm here to support your business needs, whether it's managing your calendar, handling emails, or providing detailed bookkeeping. Let's connect and see how I can help you streamline your business operations!</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 fade-in">
                     <img src="images/jo-picture.jpg" alt="Jo, Virtual Assistant" class="img-fluid rounded">
                 </div>
             </div>
         </section>
-        <section id="services" class="services">
+        <section id="services" class="services fade-in">
             <div class="container">
                 <h2 class="text-center">Services</h2>
                 <div class="row">
-                    <div class="col-md-4 service">
+                    <div class="col-md-4 service fade-in">
                         <div class="service-icon">
                             <i class="fas fa-calendar-alt"></i>
                         </div>
                         <h3>Administrative Support</h3>
                         <p>Efficient and reliable administrative support to help manage your day-to-day tasks, from scheduling to data entry.</p>
                     </div>
-                    <div class="col-md-4 service">
+                    <div class="col-md-4 service fade-in">
                         <div class="service-icon">
                             <i class="fas fa-book"></i>
                         </div>
                         <h3>Bookkeeping</h3>
                         <p>Accurate and thorough bookkeeping services to keep your financial records organised and up-to-date.</p>
                     </div>
-                    <div class="col-md-4 service">
+                    <div class="col-md-4 service fade-in">
                         <div class="service-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -81,21 +81,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 service">
+                    <div class="col-md-4 service fade-in">
                         <div class="service-icon">
                             <i class="fas fa-calendar-check"></i>
                         </div>
                         <h3>Calendar Scheduling</h3>
                         <p>Seamless calendar scheduling to help you stay on top of appointments and meetings.</p>
                     </div>
-                    <div class="col-md-4 service">
+                    <div class="col-md-4 service fade-in">
                         <div class="service-icon">
                             <i class="fas fa-database"></i>
                         </div>
                         <h3>Data Entry</h3>
                         <p>Accurate and efficient data entry services to help manage your business data.</p>
                     </div>
-                    <div class="col-md-4 service">
+                    <div class="col-md-4 service fade-in">
                         <div class="service-icon">
                             <i class="fas fa-tasks"></i>
                         </div>
@@ -105,17 +105,17 @@
                 </div>
             </div>
         </section>
-        <section id="testimonials" class="testimonials">
+        <section id="testimonials" class="testimonials fade-in">
             <div class="container">
                 <h2 class="text-center">Testimonials</h2>
                 <div class="row">
-                    <div class="col-md-6 testimonial">
+                    <div class="col-md-6 testimonial fade-in">
                         <div class="testimonial-content">
                             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel urna in nisi dapibus vestibulum."</p>
                             <p class="testimonial-author">- Client A</p>
                         </div>
                     </div>
-                    <div class="col-md-6 testimonial">
+                    <div class="col-md-6 testimonial fade-in">
                         <div class="testimonial-content">
                             <p>"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</p>
                             <p class="testimonial-author">- Client B</p>
@@ -124,7 +124,7 @@
                 </div>
             </div>
         </section>
-        <footer id="contact" class="contact text-white py-4">
+        <footer id="contact" class="contact text-white py-4 fade-in">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-left">
@@ -138,16 +138,32 @@
                 </div>
             </div>
         </footer>
-        <div class="footer-info text-center py-2">
+        <div class="footer-info text-center py-2 fade-in">
             <p>&copy; 2024 Isli Virtual PA Services. All rights reserved.</p>
             <p>Website hosted by <a href="https://www.netlify.com" class="text-black">Netlify</a></p>
-            
         </div>
-        
     </div>
-</body>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeIns = document.querySelectorAll('.fade-in');
 
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeIns.forEach(fadeIn => {
+                observer.observe(fadeIn);
+            });
+        });
+    </script>
+</body>
 </html>
