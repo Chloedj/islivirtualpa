@@ -1,132 +1,409 @@
-body {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #fff;
-    color: #000;
-    overflow: hidden;
-    animation: backgroundFade 5s infinite alternate;
-}
-
-@keyframes backgroundFade {
-    0% { background-color: #fff; }
-    100% { background-color: #f0f0f0; }
+    flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
 .container {
-    text-align: center;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    margin: 20px;
+    flex: 1; 
 }
 
 .logo {
-    max-width: 300px;
-    height: auto;
-    animation: fadeIn 2s ease-in-out;
+    width: 125px;
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-top: 20px;
-    animation: fadeIn 3s ease-in-out;
+.nav-link {
+    color: #000 !important;
 }
 
-p {
+.nav-link:hover {
+    color: rgba(0, 0, 0, .5) !important;
+}
+
+.hero {
+    position: relative;
+    height: 400px; /* Set the height to 400px */
+    background: url('images/va-hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em; 
+    margin-bottom: 10px;
+}
+
+.hero p {
     font-size: 1.2em;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.about {
+    padding: 60px 0;
+}
+
+.about-text {
+    padding-right: 30px;
+}
+
+.about img {
+    width: 65%; 
+    height: auto;
+    border-radius: 10px;
+}
+
+.services {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.services .service {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.services .service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.services .service-icon {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.services h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.services p {
+    font-size: 1em;
+    color: #666;
+}
+
+.testimonials {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.testimonials .testimonial {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .testimonial-content {
+    font-style: italic;
+    color: #666;
+}
+
+.testimonials .testimonial-author {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.about, .services, .testimonials, .contact {
+    text-align: center;
+}
+
+footer, .footer-info {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+
+.contact-email {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
     margin: 10px 0;
-    animation: fadeIn 3s ease-in-out;
 }
 
-.intro {
-    animation: fadeInUp 1s ease-in-out;
+.footer-info {
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
 }
 
-.contact {
-    font-size: 1.1em;
-    animation: fadeInUp 2s ease-in-out;
-}
-
-a {
+.footer-info a {
     color: #000;
     text-decoration: none;
-    font-weight: bold;
 }
 
-a:hover {
+.footer-info p{
+    color:#000;
+}
+
+.footer-info a:hover {
     text-decoration: underline;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.contact a {
+    color: #fff;
+    text-decoration: none;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+html {
+    scroll-behavior: smooth;
 }
 
-@media (max-width: 800px) {
-    .container {
-        max-width: 90%;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    .contact {
-        font-size: 0.9em;
-    }
+#contact p{
+    font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
     body {
-        padding: 0 10px;
-        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        color: #000;
     }
-
-    .container {
-        max-width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        margin: 0 auto;
-    }
-
+    
     .logo {
-        max-width: 100%;
-        width: 200px;
+        width: 125px;
+    }
+    
+    .nav-link {
+        color: #000 !important;
+    }
+    
+    .nav-link:hover {
+        color: rgba(0, 0, 0, .5) !important;
+    }
+    
+    .hero {
+        position: relative;
+        height: 400px; /* Set the height to 400px */
+        background: url('images/va-hero-image.jpg') no-repeat center center/cover;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 1; 
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2; 
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em; 
+        margin-bottom: 10px;
+    }
+    
+    .hero p {
+        font-size: 1.2em; 
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    .about {
+        padding: 60px 0;
+    }
+    
+    .about-text {
+        padding-right: 30px;
+    }
+    
+    .about img {
+        width: 65%; /* Adjust image width */
         height: auto;
+        border-radius: 10px;
     }
-
-    h1 {
-        font-size: 1.8em;
+    
+    .services {
+        background-color: #f9f9f9;
+        padding: 60px 0;
     }
-
-    p {
+    
+    .services .service {
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .services .service:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .services .service-icon {
+        font-size: 3em;
+        color: #333;
+        margin-bottom: 15px;
+    }
+    
+    .services h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    
+    .services p {
+        font-size: 1em;
+        color: #666;
+    }
+    
+    .testimonials {
+        background-color: #fff;
+        padding: 60px 0;
+    }
+    
+    .testimonials .testimonial {
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonials .testimonial-content {
+        font-style: italic;
+        color: #666;
+    }
+    
+    .testimonials .testimonial-author {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .about, .services, .testimonials, .contact {
+        text-align: center;
+    }
+    
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 20px 0;
+    }
+    
+    .contact-email {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px 0;
+    }
+    
+    .footer-info {
+        background-color: #fff;
+        color: #fff;
+        padding: 10px 0;
         font-size: 0.9em;
+        display: flex;
+        justify-content: space-between;
     }
-
-    .contact {
-        font-size: 0.8em;
+    
+    .footer-info a {
+        color: #000;
+        text-decoration: none;
     }
+    
+    .footer-info p{
+        color:#000;
+    }
+    
+    .footer-info a:hover {
+        text-decoration: underline;
+    }
+    
+    .contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    #contact p{
+        font-size: 0.9rem;
+    }
+    
+    .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    .fade-in.visible {
+        opacity: 1;
+    }
+    
 }
